@@ -35,7 +35,7 @@ const AppDashboard = () => {
     const hits = data.map((stat) => {
         return {
             name: stat.appName,
-            data: [stat.hookEventsCount],
+            data: [stat.hookEventsCount||0],
         }
     })
     console.log(hits)

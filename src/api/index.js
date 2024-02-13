@@ -129,6 +129,55 @@ export const getDashboardStats = async () => {
     }
   };
 
+  export const getAppStats = async (appID) => {
+    const token = await getTokenFromLocal();
+    var config = {
+      method: "get",
+      url: `${configs.API_BASE_URL}/app/stat/${appID}`,
+      headers: {
+        ...getConfigs,
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      const req = await axios(config);
+      return {
+        success: true,
+        ...req.data,
+      };
+    }  catch (err) {
+      handleStatusCode(err?.response?.status);
+      return {
+        success: false,
+        message: err?.response?.data?.message || "Request failed ",
+      };
+    }
+  };
+  export const getAppUsers = async (appID) => {
+    const token = await getTokenFromLocal();
+    var config = {
+      method: "get",
+      url: `${configs.API_BASE_URL}/app/users/${appID}`,
+      headers: {
+        ...getConfigs,
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      const req = await axios(config);
+      return {
+        success: true,
+        data: req.data,
+      };
+    }  catch (err) {
+      handleStatusCode(err?.response?.status);
+      return {
+        success: false,
+        message: err?.response?.data?.message || "Request failed ",
+      };
+    }
+  };
+
   export const getUserClients = async () => {
     const token = await getTokenFromLocal();
     var config = {
@@ -182,6 +231,31 @@ export const getDashboardStats = async () => {
     var config = {
       method: "put",
       url: `${configs.API_BASE_URL}/app/details/${appID}`,
+      headers: {
+        ...getConfigs,
+        Authorization: `Bearer ${token}`,
+      },
+      data: body,
+    };
+    try {
+      const req = await axios(config);
+      return {
+        success: true,
+        data: req.data,
+      };
+    }  catch (err) {
+      handleStatusCode(err?.response?.status);
+      return {
+        success: false,
+        message: err?.response?.data?.message || "Request failed ",
+      };
+    }
+  };
+  export const createUserClient = async (body) => {
+    const token = await getTokenFromLocal();
+    var config = {
+      method: "post",
+      url: `${configs.API_BASE_URL}/app/apps`,
       headers: {
         ...getConfigs,
         Authorization: `Bearer ${token}`,

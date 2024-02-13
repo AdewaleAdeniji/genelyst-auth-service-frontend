@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
 import AppClients from '../views/dashboard/AppClients';
 import AppClient from '../views/dashboard/AppClient';
+import CreateAppClient from '../views/dashboard/CreateClient';
 
 /* ***Layouts**** */
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
@@ -29,6 +30,7 @@ const Router = [
       { path: '/app/dashboard', exact: true, element: <AppDashboard /> },
       { path: '/app/clients', exact: true, element: <AppClients /> },
       { path: '/app/client/:clientID', exact: true, element: <AppClient /> },
+      { path: '/client/create', exact: true, element: <CreateAppClient /> },
       { path: '/sample-page', exact: true, element: <SamplePage /> },
       { path: '/icons', exact: true, element: <Icons /> },
       { path: '/ui/typography', exact: true, element: <TypographyPage /> },

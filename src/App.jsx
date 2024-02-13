@@ -8,6 +8,7 @@ import { useRoutes } from 'react-router-dom';
 import Router from './routes/Router';
 import 'react-toastify/dist/ReactToastify.css';
 import { baselightTheme } from "./theme/DefaultColors";
+import './index.css';
 
 function App() {
   

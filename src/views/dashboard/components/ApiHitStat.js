@@ -4,7 +4,7 @@ import Chart from 'react-apexcharts';
 
 
 // eslint-disable-next-line react/prop-types
-const ApiHITStat = ({ hits }) => {
+const ApiHITStat = ({ hits, title = "API Hits" }) => {
 
 
     // chart color
@@ -72,7 +72,7 @@ const ApiHITStat = ({ hits }) => {
     };
     return (
 
-        <DashboardCard title="API Hits">
+        <DashboardCard title={title}>
             <Chart
                 options={optionscolumnchart}
                 series={hits}
