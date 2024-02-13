@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import path, { resolve } from "path";
 import fs from "fs/promises";
 import svgr from "@svgr/rollup";
 // import svgr from 'vite-plugin-svgr'
@@ -12,6 +12,7 @@ export default defineConfig({
       src: resolve(__dirname, "src"),
     },
   },
+  root: path.join(__dirname, 'src'),
   esbuild: {
     loader: "jsx",
     include: /src\/.*\.jsx?$/,
