@@ -12,7 +12,6 @@ export default defineConfig({
       src: resolve(__dirname, "src"),
     },
   },
-  root: path.join(__dirname, 'src'),
   esbuild: {
     loader: "jsx",
     include: /src\/.*\.jsx?$/,
@@ -41,7 +40,7 @@ export default defineConfig({
   //   exportAsDefault: true
   // })],
   build:{
-    outDir: "src/build"
+    outDir: "build"
   },
   plugins: [svgr(), react()],
 });
