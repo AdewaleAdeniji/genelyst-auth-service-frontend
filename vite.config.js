@@ -41,7 +41,7 @@ export default defineConfig({
   //   exportAsDefault: true
   // })],
   build:{
-    outDir: "dist"
+    outDir: "build"
   },
   plugins: [svgr(), react()],
 });
