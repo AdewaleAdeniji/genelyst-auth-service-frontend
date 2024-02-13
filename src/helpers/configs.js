@@ -1,6 +1,5 @@
 const env = import.meta.env;
-console.log(env)
-console.log(import.meta.env)
+
 const configs = {
   API_BASE_URL: env.VITE_APP_API_BASE_URL,
   USER_SERVICE_URL: env.VITE_APP_USER_SERVICE_URL,

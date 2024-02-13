@@ -13,7 +13,7 @@ export const Upgrade = () => {
             <>
                 <Box>
                     <Typography variant="h6" mb={1}>API Docs</Typography>
-                    <Button color="primary" target="_blank" href="https://adminmart.com/product/modernize-react-mui-dashboard-template/" variant="contained" aria-label="logout" size="small">
+                    <Button color="primary" target="_blank" href="https://documenter.getpostman.com/view/22927069/2sA2r3b6pC" variant="contained" aria-label="logout" size="small">
                         View
                     </Button>
                 </Box>

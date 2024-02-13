@@ -37,7 +37,7 @@ const Profile = () => {
             color: 'primary.main',
           }),
         }}
-        onClick={handleClick2}
+        // onClick={handleClick2}
       >
         <Avatar
           src={ProfileImg}

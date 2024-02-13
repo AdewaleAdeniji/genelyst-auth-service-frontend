@@ -135,7 +135,8 @@ const AppClient = () => {
               <Loader />
             </Grid>
           ) : (
-            <>
+          
+          <>
               <Grid item xs={12} lg={12}>
                 <Grid container spacing={3} mb={1}>
                   <Grid item xs={12} sm={12}>

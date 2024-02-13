@@ -38,7 +38,6 @@ const AppDashboard = () => {
             data: [stat.hookEventsCount||0],
         }
     })
-    console.log(hits)
     setStats({
         stats: data,
         totalUsers,

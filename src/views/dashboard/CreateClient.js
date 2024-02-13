@@ -24,7 +24,6 @@ const CreateAppClient = () => {
     })
     toast.loading("Creating client")
     const create = await createUserClient({ appName, appDescription })
-    console.log(create);
     toast.dismiss();
     if(create.success){
         toast.success(create.data?.message);

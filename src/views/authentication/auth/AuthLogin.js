@@ -27,7 +27,6 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
     // all good
     setLoading(true);
     const api = await Login(payload);
-    console.log(api);
     setLoading(false);
     if (!api.success) {
       toast.warn(api.message);
