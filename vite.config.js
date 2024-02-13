@@ -39,6 +39,8 @@ export default defineConfig({
   // plugins: [react(),svgr({
   //   exportAsDefault: true
   // })],
-
+  build:{
+    outDir: "build"
+  },
   plugins: [svgr(), react()],
 });
